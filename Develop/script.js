@@ -20,4 +20,14 @@ function generatePassword() {
     alert("Please enter a valid password length between 8 and 128 characters.");
     return "";
   }
+
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
+
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("Please select at least one character type.");
+    return "";
+  }
 }
